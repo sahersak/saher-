@@ -1,0 +1,254 @@
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e9e9e9;
+    font-size: 16px;
+    margin: 0;
+}
+/* styling for headings and titles*/
+h1, h2, .main-title, .sub-title {
+    font-family: 'Protest Guerrilla', sans-serif; /* heading font style */
+}
+
+h1 {
+    font-size: 96px; /*font size of heading*/
+    font-weight: bold;  
+}
+/* centreted container box styling */
+.white-container-box {
+    text-align: center; /* center text of heading */
+    max-width: 80%; /*container size */
+    margin: 40px auto;
+}
+/* image styling*/
+.white-container-box img {
+    width: 200px; /*image width*/
+    height: 200px; /*image height*/
+    border-radius: 50%;/*image circular */
+}
+/*styling nav*/
+.nav-links {
+    text-align: center; 
+    display: flex;/* to create a flexable layout*/
+    gap: 136px;/* gaps between the links */
+    justify-content: center;
+    align-items: center;/* links  in vertical direction */
+    margin-top: 50px;
+}
+
+.nav-links a {
+    margin: 0 15px; /* s[ace between links */
+    text-decoration: none;/* removing underlines from text*/
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #063970; 
+    text-decoration: underline;/*adding underline to hover*/
+    transition: color 0.3s ease;/* color transcation timing*/
+}
+/* main center area styling box*/
+#main-content {
+    background-color: #ffffff; /*background*/
+    padding: 0;
+    border: 1px solid #000000;
+    margin: 40px auto;/*center content*/
+    max-width: 80%; /*width of main box*/
+}
+/* main title styling*/
+.title {
+    font-size: 96px; /*title font size*/
+    padding: 50px;/*add padding between words and container */
+    margin: 20px 0; /*add space between words */
+}
+/* subtitle styling*/
+.subtitle {
+    font-size: x-large;/*font size of subtitle*/
+    margin: 20px 50px; /*add spacing*/
+}
+/*styling  grid and there articles*/
+.grid-container {
+    column-count: 3;/*dividing into three colomns */
+    padding: 0 50px 50px;/* adding space around the grid container*/
+}
+/*styling for images album grid container */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;/* fixed colomn sizes */
+    grid-template-rows: 1fr 1fr; /*row sizes*/
+    gap: 0;
+    width: 100%;/*width of album*/
+    height: 100%;/* height of album*/
+    box-sizing: border-box;/*Include padding and border in dimensions*/
+}
+/*featured album section styling */
+.featured {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    overflow: hidden;/* hide the overflow part*/
+    display: flex;/* flex box for allignments */
+    align-items: center;/*center vertically */
+    justify-content: center;/*center horiontally */
+}
+/* individual iamge album covers styling */
+.album-cover {
+    overflow: hidden;/*hide the overflow*/
+    display: flex;/*used flexbos for alligements*/
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1; /*make container into square*/
+}
+/* Album and featured image styling */
+.featured img,
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*fit the images in the container*/
+}
+/*author section */
+.author {
+    text-align: left;/*text alignment*/
+    padding: 50px 50px;/*add spacing between text*/
+}
+/*author grid layout styling*/
+.author_section {
+    display: grid;/*uses grid layout*/
+    grid-template-columns: 1fr auto;/*text and image layout */
+    gap: 63px;/*space between text and image*/
+    align-items: center;
+}
+/*author text part styling*/
+.text-content {
+    display: flex;/*flebox for layout*/
+    flex-direction: column;/*postion of items is vertically */
+    align-items: center;/*center items*/
+}
+/*style of heading 2 */
+.text-content h2 {
+    margin: 0;/*no margin*/
+    text-align: center;/*center text*/
+    padding-bottom: 10px;/* adding space below heading*/
+}
+/*paragraph styling*/
+.text-content p {
+    margin: 0;/*no margin added*/
+    text-align: left;/*align text to left*/
+    font-size: 16px;/*font size*/
+}
+/*author profile image */
+.author img {
+    width: 200px;/*sizd of image*/
+    height: auto;/*maintaine aspect  by it self */
+    border-radius: 50%;/*image circular*/
+}
+/*footer styling*/
+footer {
+    text-align: center; /* center text allignment*/
+    background-color: #14181d;/* backkground color dark grey color*/
+    color: aliceblue;/*text color*/
+    padding: 20px 0;
+}
+
+/* Media Query for Desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+    body {
+        margin-left: 50px;/*adding left margin*/
+        margin-right: 50px;/*adding right marigin*/
+        padding: 50px;/*adding space between them*/
+    }
+
+    .nav-links {
+        gap: 173px;/*increase space*/
+        justify-content: center;
+    }
+
+    .author {
+        padding: 50px 150px;/*add padding into author section*/
+    }
+}
+
+/* Media Query for Tablet (720px - 1024px) */
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .white-container-box img {
+        width: 80px;/*different image size */
+        height: 80px;/*reduce image size*/
+    }
+
+    .nav {
+        display: flex;/* uses flexbox*/
+        justify-content: center;/*center nav*/
+        gap: 40px;
+        margin-top: 20px;/*add margin above nan*/
+    }
+
+    .title {
+        font-size: 36px;/*reduce font size*/
+        text-align: center;/*center alignment title*/
+        margin-bottom: 20px;/* add space below title*/
+    }
+
+    .subtitle {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .grid-container {
+        column-count: 1;/* single colomns layout*/
+        margin-bottom: 40px;/* adding space below grid */
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;/* two colomn layout */
+    }
+
+    .featured {
+        display: none;/* hide the feature sections*/
+    }
+}
+
+/* Large Mobile (540px-720px) */
+@media (min-width: 540px) and (max-width: 720px) {
+    .white-container-box img {
+        width: 80px;/*reduce the screen size*/
+        height: 80px;/*reduce the size*/
+    }
+
+    .title {
+        font-size: 32px; /* Reduce title size */
+        text-align: center;/* Center align title */
+    }
+/* Single-column layout */
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        display: none;/* Hide feature*/
+    }
+}
+
+/* Small Mobile (360px-540px) */
+@media (max-width: 540px) {
+    .white-container-box img {
+        width: 80px;/* Reduce image size */
+        height: 80px;/* Reduce image size */
+    }
+
+    .title {
+        font-size: 38px;/* title size */
+        text-align: center;/*center alignment of ttile */
+    }
+
+    .container {
+        grid-template-columns: 1fr;/* single layout*/
+    }
+
+    .featured {
+        display: none;/*hide section*/
+    }
+
+    .author_section {
+        flex-direction: column-reverse;/* Stack text and image in reverse order */
+    }
+}

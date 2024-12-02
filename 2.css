@@ -1,0 +1,408 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+/* Teko Font style */
+.teko-regular {
+font-family: "Teko", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+}
+/* Lato Font style */
+.lato-regular {
+font-family: "Lato", sans-serif;
+font-style: normal;
+font-weight: 400;
+}
+
+/* Desktop Wireframe*/
+* {
+padding: 0;
+margin: 0;
+}
+/* style for main page*/
+body {
+font-size: 16px;/* font size*/
+font-family: "Lato", sans-serif;/* font style */
+background-color: #231651;/* baclground color*/
+color: #070410;/* text color*/
+}
+/*images maintain contet*/
+img {
+object-fit: cover;/*image cover container*/
+flex-shrink: 0;/* shrinking of images*/
+min-width: 100%;/*image width size*/
+min-height: 100%;/* image height*/
+}
+/*button style content*/
+button {
+font-family: "Teko", sans-serif;
+font-size: 2em;/*larger font size*/
+background-color: #231651; /*match with body background color*/
+color: #EEF36A;
+padding: 16px;/* adds inner spacing*/
+border-radius: 16px;/*to make button in rounded shape we use this border raduis */
+border: none;
+}
+
+/* add hover effect for button */
+button:hover {
+background-color: #EEF36A; 
+color: #231651;
+transform: translateY(-2px);/*moves button up or down (little)*/
+transition: all 0.3s ease;/*little effects of transcations*/
+cursor: pointer;/* change cursor on pionting on hover*/
+}
+
+/* Navigation bar */
+.navigation {
+padding: 16px;  /* add space inside the nav bar */
+grid-row: 1/2;
+background-color: #EEF36A;
+color: #070410;
+display: flex; 
+flex-direction: row; /* alligns item in horzontel row*/
+align-items: baseline; /* allignes item in baseline */
+gap: 48px;  /* Large spacing for Desktop */
+box-shadow: 0 10px 0px 0px #231651;
+}
+/* logo style */
+#logo {
+font-family: "Teko", sans-serif;/* font style for logo*/
+padding-left: 48px;  /* Large space for Desktop */
+font-size: 3em; /*large font*/
+}
+/* nav link section*/
+.nav {
+display: flex;/* flex box for layout*/
+flex-direction: row;
+flex-grow: 2.5;/* to expand the link section */
+justify-content: center;/* center the link in horizntel*/
+gap: 48px;  /* Large space for Desktop */
+position: relative;
+top: -10%;/* slight move in nav link*/
+}
+
+.nav div:hover {
+color: #231651;
+cursor: pointer;
+transform: translateY(-2px);
+transition: all 0.3s ease;
+}
+/* indiviual navigations items*/
+#nav_1 {
+grid-column: 1/2;/* Assign this element to the first column */
+padding-right: 16px;/* addiing space*/
+}
+
+#nav_2 {
+grid-column: 2/3;/* assign thes element to the second colomn*/
+padding-right: 16px;
+}
+
+#nav_3 {
+grid-column: 3/4;/* assigning this element to the third colomn*/
+padding-right: 16px;
+}
+
+#nav_4 {
+grid-column: 4/5;/* assign this element to the forth colomn*/
+padding-right: 16px;
+}
+/*  This is for search button */
+#search {
+flex-grow: 0.4;/* control button growth*/
+padding: 5px 16px 5px 16px;
+background-color: #231651;  
+color: #FFFFFF;  /* white text */
+}
+#search:hover {
+background-color: #EEF36A;  
+transform: translateY(-2px);/* hover effect*/
+transition: all 0.3s ease;
+}
+/*grid layout */
+.maincontent {
+display: grid;
+grid-template-rows: 450px 800px 450px 450px 450px 10px;
+grid-template-columns: repeat(2,1fr);
+row-gap: 48px;          /* Large space for Desktop */
+column-gap: 48px;       /* Large space for Desktop */
+padding-inline: 48px;   /* Horizontal padding */
+margin-top: 48px;       
+grid-row: 2/4;/* Position in  grid */
+max-width: 900px;/* Limit width */
+align-items: center;
+margin-left: auto;
+margin-right: auto;/* Center align on screen */
+}
+
+/* Movie box containers, all are specified to have small type spacings.*/
+.movie_1, .movie_2, .movie_3, .movie_4, .movie_5, .movie_6 {
+font-size: 1.5em;/* Larger font size */
+display: grid;/* Use grid layout */
+text-align: center;
+align-items: center;/*items vertically */
+height: 450px;
+}
+.movie_1, .movie_2, .movie_3, .movie_4, .movie_5, .movie_6 {
+background-color: #EEF36A;  
+box-shadow: 16px 16px #070410; 
+}
+.movie_1, .movie_4, .movie_5, .movie_6 {
+grid-column: 1/3; /* assign tofrist colomn*/
+}
+.movie_1:hover, .movie_2:hover, .movie_3:hover, .movie_4:hover, .movie_5:hover, .movie_6:hover {
+opacity: 0.9;/* Slightly transparent */
+transform: translateY(-2px); /* Move up slightly */
+box-shadow: 0 5px 15px rgb(254, 254, 2);
+transition: all 0.3s ease;
+}
+
+.info_1, .info_2, .info_3, .info_4, .info_5, .info_6 {
+grid-area: info;
+text-align: left;
+padding-inline: 16px;
+align-self:first baseline;
+}
+
+.info_1, .info_4, .info_5, .info_6 {
+margin-top: 16px;
+}
+/*button content*/
+#button_1, #button_2, #button_3, #button_4, #button_5, #button_6 {
+grid-area: button; /* Assign to button area in grid */
+background-color: #4DCCBD; 
+color: #EEF36A;
+margin: 16px;
+}
+
+#button_1, #button_2, #button_3, #button_4, #button_5, #button_6 {
+background-color: #4DCCBD; 
+color: #231651;
+}
+
+#button_1:hover, #button_2:hover, #button_3:hover, #button_4:hover, #button_5:hover, #button_6:hover {
+background-color: #4DCCBD; /* Change background on hover */
+color: #EEF36A; /* yellow color*/
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgb(77, 204, 189);
+transition: all 0.3s ease;
+}
+
+.image_1, .image_2, .image_3, .image_4, .image_5, .image_6 {
+grid-area: image; /* Assign to image area in grid */
+display: flex; 
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+overflow: hidden
+}
+
+/* Add spacing in between areas in grid-template-areas*/
+.movie_1 {
+grid-template-rows: 1fr 16px 1fr;
+grid-template-columns: repeat(3,1fr);
+/* Assign areas for grid items */
+grid-template-areas:
+"image image image"
+". . button"
+"info info button";
+}
+/* Button styling for Movie 1 */
+#button_1 {
+margin-right: 16px;
+object-fit: cover; /* Ensure the content fits within its box */
+padding: .75em;
+width: 75%;
+justify-self: right; /* Align button to the right */
+}
+/* Info section for Movie 1 */
+.info_1 {
+width: 100%;
+}
+/* Image styling for Movie 1 */
+.image_1 img {
+height: 220px;
+}
+/* Styles for Movie 2 and Movie 3 */
+.movie_2, .movie_3 {
+display: grid; 
+grid-template-rows: 200px 200px 250px 150px; /* Define grid rows*/
+grid-template-columns: none; /* Single column grid */
+grid-template-areas: 
+"image"
+"image"
+"info"
+"button";
+height: 800px;
+}
+/* Info section padding for Movies 2 and 3 */
+.info_2, .info_3 {
+padding-top: 16px;
+}
+/* Image styling for Movies 2 and 3 */
+.image_2 img, .image_3 img {
+height: 400px;
+}
+/*Styles for Movies 4, 5, and 6 */
+.movie_4, .movie_5, .movie_6 {
+grid-template-columns: repeat(4,1fr); /* Four columns */
+grid-template-rows: repeat(2,1fr); /* 2colomns*/
+grid-template-areas: 
+"image image info info"
+"image image button button";
+}
+/* image styling*/
+.image_4 img, .image_5 img, .image_6 img {
+height: 450px;
+}
+
+/* Tablet Wireframe*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+/* logo style */
+#logo {
+font-size: 2em;
+}
+
+.maincontent {
+grid-template-rows: repeat(3,950px); /* 3 rows of equal height */
+grid-template-columns: repeat(2,1fr); /* 2 equal columns */
+row-gap: 32px; /* space bwtween rows*/
+column-gap: 32px; /* space between colomns*/
+padding-inline: 32px; /* Horizontal padding on both sides */
+margin-top: 32px;
+max-width: 900px;
+padding-bottom: 32px;
+}
+/* Assigning rows to movie grid items */
+.movie_1, .movie_2 {
+grid-row: 1/2;
+}
+
+.movie_3, .movie_4 {
+grid-row: 2/3;
+}
+
+.movie_5, .movie_6 {
+grid-row: 3/4;
+}
+ /* Assigning columns to movie grid items */
+.movie_1, .movie_3, .movie_5 {
+grid-column: 1/2;
+}
+
+.movie_2, .movie_4, .movie_6 {
+grid-column: 2/3;
+}
+/*  layout for all movie items */
+.movie_1, .movie_2, .movie_3, .movie_4, .movie_5, .movie_6 {
+display: grid; 
+grid-template-rows: 200px 200px 250px 150px 150px; /* rows define*/
+grid-template-columns: 1fr 1fr; /* 2 equal columns */
+grid-template-areas: 
+"image image"
+"image image"
+"info info"
+"button button"
+"button button";
+height: 950px;
+}
+/* styling information section*/
+.info_1, .info_2, .info_3, .info_4, .info_5, .info_6 {
+width: 90%; /* Set info section width */
+height: 70%; /* Set info section height */
+padding-top: 16px; 
+}
+
+.image_1 img, .image_2 img, .image_3 img, .image_4 img, .image_5 img, .image_6 img {
+height: 400px;
+}
+
+ /* Button styling for all movies */
+#button_1, #button_2, #button_3, #button_4, #button_5, #button_6 {
+padding-inline: 16px; /* Horizontal padding */
+margin-right: 0; /* right margin */
+margin-left: 0; /* left margin*/
+object-fit: cover; /* Ensure content fits within its box */
+padding: .4em; /* Internal spacing for buttons */
+justify-self: center; /* Center-align the button */
+width: 95%;
+height: 60%;
+white-space: pre-line;
+}
+/* margin adjustments*/
+.info_1, .info_4, .info_5, .info_6 {
+margin-top: 0;
+}
+}
+
+/* Mobile Wireframe*/
+@media screen and (min-width: 360px) and (max-width: 720px) {
+/* Navigation bar styling for mobile */
+.navigation { box-shadow: 0 16px 0px 0px #231651; }
+#nav_1, #nav_2, #nav_3, #nav_4 { display: none; }
+/* logo style */
+#logo {
+font-size: 2em;
+}
+/* Main content layout for mobile view */
+.maincontent {
+padding-top: 16px; /* Top padding for spacing */
+grid-template-rows: repeat(6,800px); /* 6 rows of equal height */
+grid-template-columns: auto;  /* Single column layout */
+row-gap: 16px; 
+column-gap: 0;
+padding-inline: 0;
+margin-top: 0;
+max-width: 900px;  /* Restrict maximum width */
+padding-bottom: 16px;
+box-shadow: 0 16px 0px 0px #EEF36A;
+}
+/* Assigning specific grid rows to each movie card */
+.movie_1 { grid-row: 1/2;}
+.movie_2 { grid-row: 2/3;}
+.movie_3 { grid-row: 3/4;}
+.movie_4 { grid-row: 4/5;}
+.movie_5 { grid-row: 5/6;}
+
+.movie_1, .movie_2, .movie_3, .movie_4, .movie_5, .movie_6 {
+box-shadow: 0 16px 0px 0px #4DCCBD; /* Adds a shadow effect to each card */
+grid-column: 1/2; 
+display: grid; 
+grid-template-rows: 200px 200px 200px 100px 100px;
+grid-template-columns: 1fr 1fr; /* Divides the card into two columns */
+grid-template-areas: 
+"image image"
+"image image"
+"info info"
+"button button"
+"button button";
+height: 800px;
+}
+/* info section of each movie card*/
+.info_1, .info_2, .info_3, .info_4, .info_5, .info_6 {
+width: 90%;
+height: 70%;
+padding-top: 16px;
+}
+/* ensure the size of images*/
+.image_1 img, .image_2 img, .image_3 img, .image_4 img, .image_5 img, .image_6 img {
+height: 400px;
+}
+/* Styling for the buttons, ensuring consistent behavior and appearance */
+#button_1, #button_2, #button_3, #button_4, #button_5, #button_6 {
+padding-inline: 0;
+margin-right: 0;
+margin-left: 0;
+object-fit: cover;
+padding: .4em;
+width: 95%;
+height: 50%;
+white-space: none;
+justify-self: center;
+}
+/* Adjusting top margin for specific info sections */
+.info_1, .info_4, .info_5, .info_6 {
+margin-top: 0;
+}
+}
